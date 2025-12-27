@@ -280,3 +280,12 @@ a:hover {
   cursor: default;
   text-decoration: none;
 }
+
+.site-footer {
+  max-width: 720px;
+  margin: 0 auto 32px;
+  padding: 0 24px;
+  font-size: 0.85rem;
+  color: var(--muted);
+  text-align: center;
+}
