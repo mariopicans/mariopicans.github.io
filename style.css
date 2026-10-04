@@ -132,7 +132,6 @@ a:hover {
   }
 }
 
-
 /* Estilo para los enlaces del encabezado */
 .header-links {
   display: flex;
@@ -167,10 +166,9 @@ a:hover {
 
 #experience .meta {
   margin-bottom: 0.8rem;
-  color: #777;
+  color: var(--muted);
   font-size: 0.9rem;
 }
-
 
 .section {
   margin-bottom: 4rem;
@@ -179,7 +177,7 @@ a:hover {
 .section h2 {
   font-size: 1.8rem;
   margin-bottom: 2rem;
-  border-bottom: 1px solid #2a2a2a;
+  border-bottom: 1px solid var(--border);
   padding-bottom: 0.5rem;
 }
 

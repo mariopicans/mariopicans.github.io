@@ -28,27 +28,28 @@ document.querySelectorAll("#lang-switch a").forEach(link => {
     localStorage.setItem("preferredLang", link.dataset.lang);
   });
 });
-// --- Configuración del enlace de correo electrónico ---
 
+// --- Configuración del enlace de correo electrónico ---
 const user = "hola";
 const domain = "mariopicans.com";
 
 const emailLink = document.getElementById("email");
-
-emailLink.href = `mailto:${user}@${domain}`;
-emailLink.textContent = `${user}@${domain}`;
+if (emailLink) {
+  emailLink.href = `mailto:${user}@${domain}`;
+  emailLink.textContent = `${user}@${domain}`;
+}
 
 // Detectar idioma por URL
-const path = window.location.pathname;
+const currentPath = window.location.pathname;
 
 let currentLang = "en";
-if (path.startsWith("/es")) currentLang = "es";
-if (path.startsWith("/gl")) currentLang = "gl";
+if (currentPath.startsWith("/es")) currentLang = "es";
+if (currentPath.startsWith("/gl")) currentLang = "gl";
 
 // Marcar idioma activo
 document.querySelectorAll("#lang-switch a").forEach(link => {
   if (link.dataset.lang === currentLang) {
     link.classList.add("active");
-    link.removeAttribute("href"); // evita recargar la misma página
+    link.removeAttribute("href");
   }
 });
